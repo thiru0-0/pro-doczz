@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Editor - DocuGenius</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docx@8.4.2/build/index.js"></script>
+</head>
+<body>
+  <header class="container nav">
+    <div class="brand">DocuGenius</div>
+    <nav class="nav-links">
+      <a href="/app/dashboard">Dashboard</a>
+      <a href="/app/account">Account</a>
+    </nav>
+  </header>
+  <main class="container editor">
+    <section>
+      <div class="editor-title">
+        <input id="doc-title" class="input" placeholder="Document Title" />
+        <div class="row">
+          <select class="select">
+            <option>Export</option>
+          </select>
+          <button id="export-txt" class="btn secondary">TXT</button>
+          <button id="export-docx" class="btn secondary">DOCX</button>
+          <button id="export-pdf" class="btn secondary">PDF</button>
+        </div>
+      </div>
+      <div class="muted save" id="save-state">All changes saved</div>
+      <textarea id="doc-area" class="editor-pane" placeholder="Write your document here"></textarea>
+    </section>
+    <aside class="card">
+      <div class="stack">
+        <h3>AI Assistant</h3>
+        <input id="ai-context" class="input" placeholder="Set document tone: Formal" />
+        <button id="ai-generate" class="btn">Generate</button>
+        <div class="tabs"><div class="tab">Suggestions</div></div>
+        <div id="ai-suggestions" class="muted">Select text to get suggestions</div>
+      </div>
+    </aside>
+  </main>
+  <footer class="container footer">
+    <div>Editor</div>
+  </footer>
+  <script src="/js/app.fixed.js"></script>
+  <script>dg.editorInit()</script>
+</body>
+</html>

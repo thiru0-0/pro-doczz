@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Account - DocuGenius</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <header class="container nav">
+    <div class="brand">DocuGenius</div>
+    <nav class="nav-links">
+      <a href="/app/dashboard">Dashboard</a>
+      <a href="/app/account">Account</a>
+    </nav>
+  </header>
+  <main class="container">
+    <section class="section">
+      <h2>Account</h2>
+      <div class="split">
+        <div class="card">
+          <h3>Profile</h3>
+          <div class="stack">
+            <input id="acc-name" class="input" placeholder="Name" />
+            <input id="acc-email" class="input" placeholder="Email" />
+            <button id="acc-save" class="btn">Save</button>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Billing</h3>
+          <div class="stack">
+            <div class="badge">Pro</div>
+            <div class="muted">Manage Subscription, View Invoices</div>
+            <button class="btn">Upgrade to Pro</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="container footer">
+    <div>Account</div>
+  </footer>
+  <script src="/js/app.fixed.js"></script>
+  <script>dg.accountInit()</script>
+</body>
+</html>
